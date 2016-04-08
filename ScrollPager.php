@@ -1,8 +1,8 @@
 <?php
 
-namespace kop\y2sp;
+namespace bobroid\y2sp;
 
-use kop\y2sp\assets\InfiniteAjaxScrollAsset;
+use bobroid\y2sp\assets\InfiniteAjaxScrollAsset;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\base\Widget;
@@ -216,6 +216,11 @@ class ScrollPager extends Widget
     public $eventOnPageChange;
 
     /**
+     * @type string Class of a pagination block
+     */
+    public $paginationClass = 'pagination hidden';
+
+    /**
      * @var array $enabledExtensions The list of the enabled plugin extensions.
      */
     public $enabledExtensions = [
@@ -243,7 +248,7 @@ class ScrollPager extends Widget
         Yii::$app->i18n->translations = ArrayHelper::merge(Yii::$app->i18n->translations, [
             'kop\y2sp' => [
                 'class' => PhpMessageSource::className(),
-                'basePath' => '@vendor/kop/yii2-scroll-pager/messages',
+                'basePath' => '@vendor/bobroid/yii2-scroll-pager/messages',
                 'fileMap' => [
                     'kop\y2sp' => 'general.php'
                 ]
@@ -346,7 +351,7 @@ class ScrollPager extends Widget
         echo LinkPager::widget([
             'pagination' => $this->pagination,
             'options' => [
-                'class' => 'pagination hidden'
+                'class' => $this->paginationClass
             ]
         ]);
     }

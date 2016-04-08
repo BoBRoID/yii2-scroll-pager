@@ -1,5 +1,5 @@
 {
-    "name": "kop/yii2-scroll-pager",
+    "name": "bobroid/yii2-scroll-pager",
     "description": "Infinite AJAX scrolling for Yii2 ListView widget",
     "homepage": "http://kop.github.io/yii2-scroll-pager/",
     "keywords": ["yii", "yii2", "scroll", "scrolling", "pager", "pagination"],
@@ -14,6 +14,10 @@
             "name": "Ivan Koptiev",
             "email": "ivan.koptiev@codex.systems",
             "role": "Developer"
+        },{
+            "name": "Nikolai Gilko",
+            "email": "n.gilko@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -23,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "kop\\y2sp\\": ""
+            "bobroid\\y2sp\\": ""
         }
     }
 }
