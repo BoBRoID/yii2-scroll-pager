@@ -11,7 +11,6 @@ use yii\helpers\Json;
 use yii\i18n\PhpMessageSource;
 use yii\web\JsExpression;
 use yii\web\View;
-use yii\widgets\LinkPager;
 
 /**
  * ScrollPager turns your regular paginated page into an infinite scrolling page using AJAX.
@@ -36,6 +35,9 @@ use yii\widgets\LinkPager;
  *
  * @author    Ivan Koptiev <ivan.koptiev@codex.systems>
  */
+
+
+
 class ScrollPager extends Widget
 {
     /**
@@ -348,7 +350,7 @@ class ScrollPager extends Widget
         ]);
 
         // Render pagination links
-        echo LinkPager::widget([
+        echo CustomLinkPager::widget([
             'pagination' => $this->pagination,
             'options' => [
                 'class' => $this->paginationClass
